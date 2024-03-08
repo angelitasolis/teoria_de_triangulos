@@ -1,0 +1,15 @@
+{
+  "name": "teoria_de_triangulos",
+  "version": "1.0.0",
+  "description": "Asignación de progra IV",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.71.1"
+  }
+}
