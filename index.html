@@ -10,27 +10,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,94.5,300..800;1,94.5,300..800&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link
       href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
       rel="stylesheet"
-      id="bootstrap-css"
-    />
+      id="bootstrap-css" />
   </head>
   <body>
     <section
       class="pt-5 pb-5 mt-0 align-items-center d-flex bg-dark custom-section"
-      style="background-image: url('../img/principal.jpg')"
-    >
+      style="background-image: url('../img/principal.jpg')">
       <div class="container-fluid">
         <div
-          class="row justify-content-center align-items-center d-flex text-center h-100"
-        >
+          class="row justify-content-center align-items-center d-flex text-center h-100">
           <div class="col-12 col-md-8 h-50 custom-content">
             <h1 class="display-2 text-light mb-2 mt-5">
               <strong>Triangules</strong>
@@ -39,16 +34,14 @@
             <p>
               <a
                 href="#type_triangules"
-                class="btn bg-danger shadow-lg btn-round text-light btn-lg btn-rised"
-                >Play and learn</a
-              >
+                class="btn bg-danger shadow-lg btn-round text-light btn-lg btn-rised">Play
+                and learn</a>
             </p>
 
             <div class="btn-container-wrapper p-relative d-block zindex-1">
               <a
                 class="btn btn-link btn-lg mt-md-3 mb-4 scroll align-self-center text-light"
-                href="#type_triangules"
-              >
+                href="#type_triangules">
                 <i class="fa fa-angle-down fa-4x text-light"></i>
               </a>
             </div>
@@ -58,30 +51,35 @@
     </section>
 
     <div class="custom-section-wrapper">
-    <div class="container-fluid pt-4 pb-4" id="measurements_container">
+      <div class="container-fluid pt-4" id="measurements_container">
         <div class="col-12 d-flex justify-content-center">
-            <h3 class="text-center pt-3 pb-3 fw-bold"> Write the values of the sides </h3>
-          </div>
-      <div class="row">
-        <div class="col-12">
-          <div class="measurements-container p-4">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="sides-container">
-                  <form role="form">
-                    <div class="form-group">
-                      <label for="sideA"> Side A </label>
-                      <input type="text" class="form-control" id="sideA" />
-                    </div>
-                    <div class="form-group">
-                      <label for="sideB"> Side B </label>
-                      <input type="text" class="form-control" id="sideB" />
-                    </div>
-                    <div class="form-group">
-                      <label for="sideC"> Side C </label>
-                      <input type="text" class="form-control" id="sideC" />
-                    </div>
-                  </form>
+          <h3 class="text-center pt-3 pb-3 fw-bold"> Write the values of the
+            sides </h3>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="measurements-container p-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="sides-container">
+                    <form role="form">
+                      <div class="form-group">
+                        <label for="sideA"> Side A </label>
+                        <input type="number" class="form-control" id="sideA"
+                          min="0" required />
+                      </div>
+                      <div class="form-group">
+                        <label for="sideB"> Side B </label>
+                        <input type="number" class="form-control" id="sideB"
+                          min="0" required />
+                      </div>
+                      <div class="form-group">
+                        <label for="sideC"> Side C </label>
+                        <input type="number" class="form-control" id="sideC"
+                          min="0" required />
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
@@ -89,35 +87,31 @@
         </div>
       </div>
     </div>
-</div>
 
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4 text-center">
-          <button type="button" class="btn btn-success btn-block btn-transparent">Clean</button>
-        </div>
-      <div class="col-md-4"></div>
+    <div class="row pb-4">
+      <div class="col-md-4 text-center"></div>
+      <div class="col-md-4">
+        <button type="button"
+          class="btn btn-success btn-block btn-transparent"
+          onclick="cleanInputs(),cleanResults()">Clean</button>
+      </div>
     </div>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-          <h3 class="text-center">Results</h3>
-        </div>
-        <div class="col-md-4"></div>
+      <div class="row text-center mb-2">
+        <h3 class="text-center fw-bold fs-1">RESULTS</h3>
       </div>
-      <div class="row">
-        <div class="col-md-4">
-          <h5>Area</h5>
-          <span class="badge badge-default">Label</span>
+      <div class="row text-center">
+        <div class="col-md-4 ">
+          <h5 class="fs-3">Area</h5>
+          <p class="fs-5" id="area"></p>
+        </div>
+        <div class="col-md-4 ">
+          <h5 class="fs-3">Perimeter</h5>
+          <p class="fs-5" id="perimeter"></p>
         </div>
         <div class="col-md-4">
-          <h5>Perimeter</h5>
-          <span class="badge badge-default">Label</span>
-        </div>
-        <div class="col-md-4">
-          <h5>Classification</h5>
-          <span class="badge badge-default">Label</span>
+          <h5 class="fs-3">Classification</h5>
+          <p class="fs-5" id="triangleType"></p>
         </div>
       </div>
     </div>
@@ -134,17 +128,15 @@
             <img
               src="img/triangule.png"
               class="card-img-top"
-              alt="Equilateral Triangle"
-            />
+              alt="Equilateral Triangle" />
             <div class="card-body">
               <h5 class="card-title">Equilateral Triangle</h5>
               <p class="card-text">
                 A triangle with all three sides of equal length. Angles are also
                 equal, each measuring 60 degrees.
               </p>
-              <a href="../src/type_of_triangules.pdf" class="btn btn-primary"
-                >Learn More</a
-              >
+              <a href="../src/type_of_triangules.pdf"
+                class="btn btn-primary">Learn More</a>
             </div>
           </div>
         </div>
@@ -154,40 +146,33 @@
             <img
               src="img/triangule1.png"
               class="card-img-top"
-              alt="Isosceles Triangle"
-            />
+              alt="Isosceles Triangle" />
             <div class="card-body">
               <h5 class="card-title">Isosceles Triangle</h5>
               <p class="card-text">
                 A triangle with at least two sides of equal length. The angles
                 opposite the equal sides are also equal.
               </p>
-              <a href="../src/type_of_triangules.pdf" class="btn btn-primary"
-                >Learn More</a
-              >
+              <a href="../src/type_of_triangules.pdf"
+                class="btn btn-primary">Learn More</a>
             </div>
           </div>
         </div>
-
-
-
 
         <div class="col-sm-12 col-md-6 col-lg-3 mb-sm-1">
           <div class="card" style="width: 17rem">
             <img
               src="img/triangule3.png"
               class="card-img-top"
-              alt="Scalene Triangle"
-            />
+              alt="Scalene Triangle" />
             <div class="card-body">
               <h5 class="card-title">Scalene Triangle</h5>
               <p class="card-text">
                 A triangle with all sides of different lengths. No angles are
                 equal.
               </p>
-              <a href="../src/type_of_triangules.pdf" class="btn btn-primary"
-                >Learn More</a
-              >
+              <a href="../src/type_of_triangules.pdf"
+                class="btn btn-primary">Learn More</a>
             </div>
           </div>
         </div>
@@ -197,53 +182,54 @@
             <img
               src="img/triangule2.png"
               class="card-img-top"
-              alt="Right Triangle"
-            />
+              alt="Right Triangle" />
             <div class="card-body">
               <h5 class="card-title">Right Triangle</h5>
               <p class="card-text">
                 A triangle with one 90-degree angle. The side opposite the right
                 angle is called the hypotenuse.
               </p>
-              <a href="../src/type_of_triangules.pdf" class="btn btn-primary"
-                >Learn More</a
-              >
+              <a href="../src/type_of_triangules.pdf"
+                class="btn btn-primary">Learn More</a>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <footer class="container-fluid p-2 footer-custom custom-footer" id="footer">
-        <div class="row">
-            <div class="col-sm-12 col-md-6">
-                <p class="text-center fw-bold">
-                    Operating Hours: <br />Monday to Friday from 9:00am to 5:00pm <br />
-                    Telephone: <br />+1 800 123 4567 <br />Email:
-                    <br />contact@mathacademy.com <br />Address: <br />123 Math Street, Education City, CA
-                </p>
-            </div>
-            <div class="col-sm-12 col-md-5 text-center">
-                <img
-                  src="img/favicon.png"
-                  alt="Logo"
-                  width="115"
-                  height="auto"
-                  class="d-inline-block align-text-buttom"
-                />
-                <div class="row pt-2 ps-4 pe-4">
-                    <div class="col-4"><a href>Terms and Conditions</a></div>
-                    <div class="col-4"><a href>Privacy Policy</a></div>
-                    <div class="col-4"><a href>Cookie Policy</a></div>
-                </div>
-                <h2 class="last_tittle">&copy; Math Academy | Project Innovator | 2024</h2>
-            </div>
+    <footer class="container-fluid p-2 custom-footer" id="footer">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <p class="text-center fw-bold">
+            Operating Hours: <br />Monday to Friday from 9:00am to 5:00pm <br />
+            Telephone: <br />+1 800 123 4567 <br />Email:
+            <br />contact@mathacademy.com <br />Address: <br />123 Math Street,
+            Education City, CA
+          </p>
         </div>
+        <div class="col-sm-12 col-md-5 text-center">
+          <img
+            src="img/favicon.png"
+            alt="Logo"
+            width="100"
+            height="auto"
+            class="d-inline-block align-text-buttom" />
+          <div class="row pt-2 ps-5 pe-5">
+            <div class="col-4 fs-6"><a href>Terms and Conditions</a></div>
+            <div class="col-4 fs-6"><a href>Privacy Policy</a></div>
+            <div class="col-4 fs-6"><a href>Cookie Policy</a></div>
+          </div>
+          <h2 class="last_tittle fs-4 mt-1">&copy; Math Academy | Project
+            Innovator | 2024</h2>
+        </div>
+      </div>
     </footer>
-    
+
+    <script src="js/script.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    </body>
-    </html>
-    
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
+</html>
