@@ -1,0 +1,109 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+header {
+  width: 100%;
+  height: 600px;
+  background: #16222a; // Corregido: eliminada la repetición
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.custom-section {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+.custom-content {
+  h1 {
+    display: block;
+    color: #fff;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+  }
+
+  p.lead {
+    color: #fff;
+    margin-bottom: 5rem;
+  }
+
+  .btn-round {
+    @include button-variant($background: $danger, $border: $danger);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .btn-container-wrapper {
+    position: relative;
+    display: block;
+    z-index: 1;
+  }
+}
+
+.measurements-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto; 
+    max-width: 600px; 
+
+    
+    .sides-container,
+    .angles-container {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+  
+      blockquote {
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 10px;
+        border-left: 5px solid rgba(255, 255, 255, 0.5);
+        border-radius: 5px;
+      }
+    }
+  }
+
+.btn-transparent {
+  background-color: rgba(40, 167, 69, 0.7);
+  color: #fff;
+  border: none;
+
+  &:hover {
+    background-color: rgba(40, 167, 69, 0.8);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  backdrop-filter: blur(5px);
+}
+
+.types-of-triangles {
+  margin-bottom: 20px;
+}
+.custom-footer {
+    background-image: url('../img/principal.jpg'); 
+      background-size: cover;
+    background-position: center center;
+    color: #fff; 
+
+    
+    a {
+        color: #fff; 
+        &:hover {
+            color: #ccc; 
+        }
+    }
+
+    .row {
+        margin: 0 auto; 
+        width: auto; 
+    }
+}
+.custom-footer {
+    margin-right: 0;
+    padding-right: 0;
+  }
