@@ -1,6 +1,6 @@
-import { area, perimeter, triangleType , validateTriangle } from './triangle.js';
+import { area, perimeter, triangleType, validateTriangle } from "./triangle.js";
 
-function calcular() {
+function calculate() {
   var side1 = parseFloat(document.getElementById("sideA").value);
   var side2 = parseFloat(document.getElementById("sideB").value);
   var side3 = parseFloat(document.getElementById("sideC").value);
@@ -27,9 +27,9 @@ function calcular() {
   }
 }
 
-document.getElementById("sideA").addEventListener("input", calcular);
-document.getElementById("sideB").addEventListener("input", calcular);
-document.getElementById("sideC").addEventListener("input", calcular);
+document.getElementById("sideA").addEventListener("input", calculate);
+document.getElementById("sideB").addEventListener("input", calculate);
+document.getElementById("sideC").addEventListener("input", calculate);
 
 function cleanInputs() {
   document.getElementById("sideA").value = "";
@@ -42,3 +42,8 @@ function cleanResults() {
   document.getElementById("perimeter").textContent = "";
   document.getElementById("triangleType").textContent = "";
 }
+
+document.getElementById("clean-button").addEventListener("click", function () {
+  cleanInputs();
+  cleanResults();
+});
